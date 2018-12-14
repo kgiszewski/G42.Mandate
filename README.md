@@ -23,3 +23,6 @@ Mandate.That<InvalidOperationException>(someVar > 0, $"{someVar} must be greater
 
 //more code that will execute
 ```
+
+# Nuget
+https://www.nuget.org/packages/G42.Mandate/
