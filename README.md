@@ -24,5 +24,13 @@ Mandate.That<InvalidOperationException>(someVar > 0, $"{someVar} must be greater
 //more code that will execute
 ```
 
+```
+decimal someVar = null;
+
+Mandate.That<InvalidOperationException>(someVar != null, $"{someVar} must be greater than zero!"); //will throw
+
+//more code that will execute
+```
+
 # Nuget
 https://www.nuget.org/packages/G42.Mandate/
