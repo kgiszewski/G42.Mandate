@@ -25,7 +25,7 @@ Mandate.That<InvalidOperationException>(someVar > 0, $"{someVar} must be greater
 ```
 
 ```
-decimal someVar = null;
+decimal? someVar = null;
 
 Mandate.That<InvalidOperationException>(someVar != null, $"{someVar} must be greater than zero!"); //will throw
 
