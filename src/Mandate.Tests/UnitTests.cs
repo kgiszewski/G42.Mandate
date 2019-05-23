@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace Mandate.Tests
@@ -40,6 +41,22 @@ namespace Mandate.Tests
             {
                 G42.Mandate.Mandate.IsNotNull<Exception>(null, "");
             });
+        }
+
+        [Test]
+        public void Can_Pass_Args_In_Custom_Exception()
+        {
+            try
+            {
+                G42.Mandate.Mandate.That<FooException>(false, "Hi there.", new List<object> {"hello world"}.ToArray());
+            }
+            catch (FooException ex)
+            {
+                var args = ex.Args;
+
+                Assert.AreEqual(1, args.Length);
+                Assert.AreEqual("hello world", args[0]);
+            }
         }
     }
 }
