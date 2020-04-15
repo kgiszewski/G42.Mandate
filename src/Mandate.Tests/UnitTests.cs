@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -30,7 +30,7 @@ namespace Mandate.Tests
         {
             Assert.DoesNotThrow(() =>
             {
-                G42.Mandate.Mandate.IsNotNull<Exception>(new {}, "");
+                G42.Mandate.Mandate.IsNotNull<Exception>(new { }, "");
             });
         }
 
@@ -48,7 +48,7 @@ namespace Mandate.Tests
         {
             try
             {
-                G42.Mandate.Mandate.That<FooException>(false, "Hi there.", new List<object> {"hello world"}.ToArray());
+                G42.Mandate.Mandate.That<FooException>(false, "Hi there.", new List<object> { "hello world" }.ToArray());
             }
             catch (FooException ex)
             {

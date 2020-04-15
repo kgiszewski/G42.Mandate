@@ -7,7 +7,7 @@ namespace Mandate.Tests
         public object[] Args;
 
         public FooException(string message, object[] args)
-            :base(message)
+            : base(message)
         {
             Args = args;
         }
